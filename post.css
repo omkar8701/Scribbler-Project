@@ -1,0 +1,101 @@
+header{
+    font-family: Montez,cursive;
+    font-size: 30px;
+    color: blue;
+    width: 80%;
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.buttons{
+    color:white;
+    background-color: blue;
+    border:0;
+    padding-top:5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    margin-right:5px;
+    margin-left: 0px;
+    border:1;
+}
+.sub-heading{
+    font-family:'Ubuntu Mono';
+    font-size: 13px;
+    margin-top: 2px;    
+}
+.heading{
+    margin-top: 50px;
+    margin-left: 500px;
+}
+.author-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.authorname{
+font-family:'Ubuntu Mono';
+font-size: 17px;
+margin-top: 12px;
+margin-left: 40px;
+}
+.edit{
+    width:90px;
+    margin-right:35px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding-right: 23px;
+    padding-left: 16px;
+    background-color:  #FF007F;
+    color: white;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+      
+    
+}
+.editicon{
+    color: white;
+}
+.content{
+    margin-left:40px;
+    margin-right:22px;
+}
+.like{
+    margin-left: 40px;
+    background-color: #FF007F;
+    color: white;
+    border: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+.comment{
+    margin-left: 40px;
+    margin-top:20px;
+}
+.commentbut{
+    margin-top:10px;
+    margin-left: 40px;
+    background-color: #FF007F;
+    color: white;
+    border: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+.editable {
+    border: 2px solid pink;
+    padding: 5px;
+}
+.likestatement{
+    margin-left: 40px;
+}
+.allcoment{
+    margin-left: 40px;
+}

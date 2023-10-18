@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- TODO: Include all your code for the header and home page here -->
+    <div class="container">
+    <header>ScriBBler</header>
+        <button class="buttons" id="signup" onclick="signupmodal()">Sign Up</button>
+        <div class="overlay" ></div>
+    <div class="loginform">
+        <label class="headerspan">Get Started</label>
+        <span onclick="closesignupmodal()">&times;</span><br>
+        <hr>
+        <form>
+            <div>
+                <label class="label">Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div>
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div>
+                <label>Confirm-password</label>
+                <input type="password" placeholder="Re-enter your username" required>
+            </div>
+            <button>Sign Up</button>
+
+
+        </form>
+    </div>
+    <button class="buttons"id="signup" onclick="singin()">sign in</button>
+    <div class="overlay"></div>
+    <div class="signinform">
+        <label class="headerspan">Welcome Back!</label>
+        <span onclick="closesignin()">&times;</span>
+        <hr>
+        <form >
+            <div>
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <button>Sign in</button>
+            <p>Not a member?<a href="#" id="signupLinkText"> Sign up</a></p>
+        </form>
+    </div>
+
+
+
+
+    </div>
+   </div>
+   <div class="sub-heading">Explore, Imagine, Create</div>
+
+   <div class="container2">
+    <button class="buttons2" id="Sign"><a href="file:///C:/Users/Omkar/Downloads/Course%2B6%2BProject%2BStub%2B-%2BScribbler/postlist.html">All Posts</a></button>
+    <div id="mymodal" class="modal">
+        <div class="modal-content">
+
+            
+        </div>
+        
+
+    </div>
+    <button class="buttons2" id="create" onclick="create()">Create Post</button>
+    <div class="overlay"></div>
+        <div class="createpost">
+            <label class="headerspan">Pen Your Post</label>
+            <span onclick="closecreate()" >&times;</span>
+            <hr>
+            <form>
+                <div>
+                <label>Title</label><br>
+                <input type="text" placeholder="Enter title of your post">
+                </div>
+                <div>
+                <label>Content</label><br>
+                <textarea placeholder="Enter the Content for your post" rows="22" cols="130"></textarea><br>
+                </div>
+                <button >Create</button>
+            </form>
+        </div>
+    
+
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>

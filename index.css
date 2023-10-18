@@ -1,0 +1,267 @@
+body{
+    background-image: url("C:/Users/Omkar/Downloads/Course+6+Project+Stub+-+Scribbler/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 1600px 750px;
+}
+header{
+    font-family: Montez,cursive;
+    font-size: 30px;
+    color: blue;
+    width: 80%;
+    
+}
+.sub-heading{
+    font-family:'Ubuntu Mono';
+    font-size: 13px;
+    margin-top: 2px;    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.buttons{
+    color:white;
+    background-color: blue;
+    border:0;
+    padding-top:7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 7px;
+    margin-right:0px;
+    margin-left: 0px;
+    border:1;
+}
+.container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 21%;
+}
+.buttons2{
+    background-color: #e0c247;
+    margin-right: 8px ;
+    border:0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.modal{
+    display: none;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+}
+.close{
+    position: absolute;
+    right: 35px;
+    top:15px;
+    font-size: 20px;
+}
+.form-container{
+    padding: 16px;
+}
+.signupbtn {
+    width: 50% 
+} 
+#signup{
+    cursor: pointer;
+}
+.overlay{
+    width:100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    top: 0%;
+    position: fixed;
+    z-index: -1 ;
+    opacity: 0;
+}
+.showoverlay{
+    opacity: 1;
+    z-index: 1 ;
+
+}
+.loginform{
+    width:350px;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+.showloginform{
+    top:50%;
+}
+.loginform input{
+    width:97%;
+    height: 35px;
+    margin-bottom: 10px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.1);
+    
+    
+}
+.loginform button{
+    background-color: green;
+    color: white;
+    padding: 10px 148px;
+    cursor: pointer;
+    border: 0;
+}
+.loginform span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    color: black;
+    height: 30px;    
+    background-color: white;
+    line-height: 30px;
+    text-align: center;
+    top: 0px;
+    cursor: pointer;
+}
+.label{
+    margin-bottom: 10px;
+}
+.headerspan{
+    padding: 0px;
+}
+#signup{
+    cursor: pointer;
+}
+.overlay{
+    width:100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: -1 ;
+    opacity: 0;
+    top: 0%;
+}
+.showOver{
+    opacity: 1;
+    z-index: 1 ;
+}
+.signinform{
+    width:350px;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+.signinform input{
+    width:97%;
+    height: 35px;
+    margin-bottom: 10px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+.signinform button{
+    background-color: green;
+    color: white;
+    padding: 10px 148px;
+    cursor: pointer;
+    border: 0;
+}
+.signinform span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    color: black;
+    height: 30px;    
+    background-color: white;
+    line-height: 30px;
+    text-align: center;
+    top: 0px;
+    cursor: pointer;
+}
+.label{
+    margin-bottom: 10px;
+}
+.headerspan{
+    padding: 0px;
+}
+#signin{
+    cursor: pointer;
+}
+.showsignin{
+    top:50%;
+}
+.overlay{
+    width:100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: -1 ;
+    opacity: 0;
+    top: 0%;
+
+}
+.showOver{
+    opacity: 1;
+    z-index: 1 ;
+}
+.createpost{
+    width:1000px;
+    background: white;
+    padding: 20px;
+    height: 70vh;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+.createpost input{
+    width:97%;
+    height: 35px;
+    margin-bottom: 10px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.1);
+
+}
+.createpost button{
+    background-color: green;
+    color: white;
+    padding: 10px 50px;
+    cursor: pointer;
+    border: 0;
+    margin-top: 20px;
+    margin-left: 45%;
+}
+.createpost span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    color: black;
+    height: 30px;    
+    background-color: white;
+    line-height: 30px;
+    text-align: center;
+    top: 0px;
+    cursor: pointer;
+}
+.label{
+    margin-bottom: 10px;
+}
+.headerspan{
+    padding: 0px;
+}
+#create{
+    cursor: pointer;
+}
+.showcreate{
+    top:50%;
+}

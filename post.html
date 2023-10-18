@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="post.css">
+        <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="post.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>ScriBBler</header>
+            <div class="container">
+            <button class="buttons">Sign Up</button>
+            <button class="buttons">Sign in</button>
+            </div>
+        </div>
+        <div>
+            <p class="sub-heading">Explore, Imagine, Create</p>
+        </div>
+
+        <h3 class="heading">Everything you should know about 'module' & 'require' in Node.js</h3>
+        <div class="author-edit">
+        <p class="authorname" id="postTitle">Srishti Gupta</p>
+        <button class="edit" id="editButton">Edit <span class="editicon"><i class="fa fa-edit"></i></span></button>
+        <button id="saveButton" class="edit"  style="display: none;"><i class="fas fa-save"></i> Save</button>
+        </div>
+        <div class="content" id="postText">
+            <p>Each JavaScript file is treated as a separate module in NodeJS. It uses commonJS module system : require(), exports and module.export.The main object exported by require() module is a function.  When Node invokes that require() function with a file path as the function’s only argument, Node goes through the following sequence of steps: Resolving and Loading
+
+                Wrapping
+                Execution
+                Returning Exports
+                Caching
+                Let’s look at each step in more detail.
+                
+                Resolving and Loading: In this step, Nodes decide which module to load core module or developer module or 3rd-party module using the following steps:
+                When require function receive the module name as its input, It first tries to load core module.
+                If path in require function begins with ‘./’ or ‘../’ It will try to load developer module.
+                If no file is find, it will try to find folder with index.js in it .
+                Else it will go to node_modules/ and try to load module from here .
+                If file is still not found , then an error is thrown .
+                Wrapping:once the module is loaded , the module code is wrapped in a special function which will give access to a couple of objects.
+                Wrapping is done to give that loaded file a private scope or local scope. So that it can’t be accessed globally.Execution: In this part, the code of the module or code inside the wrapper function run by the NodeJS runtime.
+Returning Exports: In this part, require function return the exports of required module. These exports are stored in module.exports.
+Use module.exports to export single variable/class/function. If you want to export multiple function or variables use exports  ( exports.add = (a,b)=>a+b ).
+Caching: At the end all modules are cached after the first time they are loaded e.g. If you require the same module multiple times, you will get the same result. So the code and modules are executed in the first call and in a subsequent call, results are retrieved from the cache.
+For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz.
+
+Let’s take an example to understand this better.
+
+You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius, as given below:
+
+circle.js
+
+You can call circle.js file a module named circle.
+
+You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there’s a large application and you have all your code written in just one place, just one file. Too messy, right?
+The function wrapper for the circle module will look like the one given below:
+
+You can see that there is a function wrapper at the root level encompassing all the code written inside the circle module.
+
+The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise.
+This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function.
+
+Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa.
+
+The five parameters — exports, require, module, __filename, __dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module.
+
+Let’s revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified.
+
+So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let’s discuss these two parameters in this article.
+
+</p>
+        </div>
+        <div>
+            <button class="like" id="likeButton"><sapn><i class="fa fa-thumbs-up"></i></sapn> Like</button>
+            <p id="likeCount" class="likestatement">Be the first one to like this!</p>
+        </div>
+        <div>
+            <textarea placeholder="Leave a comment" class="comment" rows="5" cols="100" id="commentInput"></textarea>
+        </div>
+        <button class="commentbut" id="commentButton">Comment</button>
+        <div id="commentSection">
+            <p class="allcoment"><strong>All Comments</strong></p>
+            
+        </div>
+        
+    </body>
+</html>
